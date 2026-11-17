@@ -1,5 +1,6 @@
 def buildJar() {
     echo "building the application..."
+    echo "Executing mvn package command for branch ${BRANCH_NAME}..."
     sh 'mvn package'
 } 
 
