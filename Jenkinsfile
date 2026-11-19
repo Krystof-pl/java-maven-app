@@ -22,10 +22,12 @@ pipeline {
                 }
             }
         }
-        stage("build image") {
+        stage("build and push image") {
             steps {
                 script {
-                    buildImage 'dockerkob/demo-app:jma-3.2'
+                    buildImage 'dockerkob/demo-app:jma-3.3'
+                    dockerLogin()
+                    dockerPush 'dockerkob/demo-app:jma-3.3'
                 }
             }
         }
