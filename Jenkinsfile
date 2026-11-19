@@ -25,7 +25,7 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    buildImage 'dockerkob/demo-app:jma-3.1'
+                    buildImage 'dockerkob/demo-app:jma-3.2'
                 }
             }
         }
