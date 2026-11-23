@@ -1,6 +1,6 @@
 def buildJar() {
     echo "building the application..."
-    echo "Executing mvn package command for branch ${BRANCH_NAME}..."
+    echo "Executing mvn package command for branch ${env.BRANCH_NAME}..."
     sh 'mvn package'
 } 
 
@@ -15,7 +15,7 @@ def buildImage() {
 
 def deployApp() {
     echo 'deploying the application...'
-    echo "Github integration for branch ${BRANCH_NAME}..."
+    echo "Github integration for branch ${env.BRANCH_NAME}..."
 } 
 
 return this
