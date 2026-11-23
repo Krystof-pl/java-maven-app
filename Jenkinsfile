@@ -46,6 +46,7 @@ pipeline {
             steps {
                 script {
                     echo "deploying"
+                    echo "github integration triggered"
                     gv.deployApp()
                 }
             }
